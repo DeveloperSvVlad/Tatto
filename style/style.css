@@ -1,0 +1,654 @@
+/* Обнуление */
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
+input,button,textarea{font-family:inherit; box-sizing: border-box;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;display:block;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+/** Section AboutUS **/
+.about{
+	display: flex;
+	justify-content: space-between;
+}
+.about__left {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-basis: 50%;
+	background-image: url('../img/aboutusimg.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.about__left-title{
+	font-family: 'TimesNewPSBoldMT';
+	font-size: 36px;
+	text-transform: uppercase;
+	color: #010101;
+	border: 10.0px solid #121212;
+	width: 300px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.about__right{
+	flex-basis: 50%;
+	background-color: #f2efe5;
+	min-height: 500px;
+	text-align: center;
+}
+
+.about__right-title{
+	font-family: 'TimesNewPSMT';
+	font-size: 18px;
+	color: #000000;
+	max-width: 489px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.about__right-subtitle{
+	font-family: 'TimesNewPSMT';
+	font-size: 18px;
+	font-weight: 400;
+	color: #000000;
+	max-width: 538px;
+	margin: 0 auto;
+}
+
+
+.about__right-img{
+	margin-top: 80px;
+	margin-bottom: 30px;
+}
+/** Section about US end **/
+
+
+
+
+/** Setction Work **/
+/* !Слайдер */
+.work__slider{
+	min-width: 0;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.work__slider .slick-arrow{
+    position: absolute;
+    top: 50%;
+    margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	width: 30px;
+	height: 50px;
+}
+.work__slider .slick-arrow.slick-prev{
+    left: 0;
+    background: url('../img/svg/sl-arrow_l.svg') 0 0 / 100% no-repeat;
+}
+.work__slider .slick-arrow.slick-next{
+    right: 0;
+    background: url('../img/svg/sl-arrow_r.svg') 0 0 / 100% no-repeat;
+}
+
+.work{
+	display: flex;
+	flex-wrap: wrap;
+}
+.work__img {
+	width: 100%;
+	flex-basis: 16.666%;
+	position: relative;
+}
+.work__img img{
+   width: 100%;
+}
+.work__img:hover{
+	background-color: #ccc8b6;
+	opacity: 0.55;
+}
+.work__img:hover .work__nav-link {
+	font-size: 25px;
+	color: black;
+	display: inline-block;
+}
+.work__nav-hover{
+	position: absolute;
+	top: 80%;
+	left: 25px;
+}
+.work__nav-link{
+	display: none;
+	padding-left: 25px;
+}
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+.slick-list {
+	overflow: hidden;
+}
+
+
+/** Setction Work end **/
+
+
+
+
+/** Comment **/
+.comment{
+	height: 350px;
+	background: url('../img/sectionbg1.jpg') no-repeat center;
+	background-size: cover;
+	display: flex;
+	text-align: center;
+	align-items: center;
+}
+.comment__title{
+	font-family: 'TimesNewPSBoldMT';
+	font-size: 24px;
+	line-height: 1.2;
+	font-style: italic;
+	color: #f2efe5;
+	position: relative;
+	max-width: 743px;
+	margin: 0 auto;
+}
+.comment__title::before {
+	content: url('../img/1.png');
+	width: 56px;
+	height: 33px;
+	color: #f2efe5;
+	position: absolute;
+	bottom: 100%;
+	right: 100%;
+}
+.comment__title::after {
+	content: url('../img/2.png');
+	width: 56px;
+	height: 33px;
+	color: #f2efe5;
+	position: absolute;
+	left: 100%;
+}
+.comment__title span{
+	color: #f2efe5;
+	font-family: 'TimesNewPSMT';
+	font-style: italic;
+	font-size: 14px;
+	text-transform: uppercase;
+	position: absolute;
+	left: 85%;
+	top: 220%;
+}
+ /** Comment end **/ 
+
+
+
+/** Team  start **/
+/* !Нужно сделать один общий див с именем и занести туда все блоки и дать им Flex-basis, а внутри добавлять класс по ситуации */
+/* TODO Такое название FIRST SECOND лучше не юзать, если я хочу использовать и научиться бэму */
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+}
+.team__item {
+    flex: 1 0 33.3333%
+}
+.team__item-img {
+	width: 100%;
+}
+.team__item img {
+	max-width: 100%;
+	min-height: 100%;
+}
+.team__item-bg {
+    display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+    background: url('../img/team/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.team__item-title {
+    color: #010101;
+    font-family: 'TimesNewPSBoldMT';
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 10px solid #000;
+    padding: 20px 80px;
+}
+
+
+.team__item-bio{
+    display: flex;
+	flex-direction: column;
+	text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc8b6;
+    min-height: 100%;
+}
+.team__item-padtop {
+	margin-top: 35px;
+}
+.team__item-title-bio {
+    color: #000000;
+    font-family: 'TimesNewPSBoldMT';
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.team__item-subtitle-bio {
+    font-family: 'OpenSans';
+	font-size: 14px;
+	line-height: 1.2;
+	font-weight: 400;
+    color: #000000;
+    text-align: left;
+	margin: 40px 15px;
+}
+.team__item-link-bio {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.team__item-link-bio a {
+    display: inline-block;
+	font-size: 36px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #000000;
+	margin-bottom: 50px;
+}
+.team__form{
+	display: flex;
+	justify-content: center;
+	background-color: cornsilk ;
+}
+.team__item-inner{
+    display: flex;
+	flex-direction: column;
+	width: 60%;
+    justify-content: center;
+}
+.team__item-title-form {
+    font-family: 'TimesNewPSBoldMT';
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: #000000;
+}
+.team__item-subtitle-form {
+    font-family: 'TimesNewPSMT';
+	font-size: 12px;
+	line-height: 12px;
+	text-transform: uppercase;
+	color: #000000;
+}
+.team__item-input {
+    width: 100%;
+	font-family: 'TimesNewPSBoldMT';
+	opacity: 0.45;
+	font-size: 12px;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: #333333;
+	padding-left: 20px;
+	height: 40px;
+	margin: 40px 0px 25px 0px;
+	border: 1px solid #000;
+}
+.team__item-button {
+    width: 100%;
+	font-size: 12px;
+	font-family: 'TimesNewPSMT';
+	line-height: 21px;
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #9a977a;
+	height: 40px;
+	position: relative;
+	border-radius: 5px;
+}
+.team__inner-button::before{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 40px;
+	background: rgba(255,255,255,0.3);
+	border-radius: 5px;
+	transition: all 1s ease;
+}
+.team__inner-button:hover::before{
+	width: 100%;
+}
+
+/** Team END **/
+
+
+/** Section comment2 **/
+.comment2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 350px;
+	background: url('../img/sectionbg2.jpg') no-repeat center;
+	background-size: cover;
+}
+.comment2__subtitle{
+	font-family: 'TimesNewPSBoldMT';
+	font-size: 22px;
+	font-style: italic;
+	color: #f2efe5;
+	max-width: 907px;
+	margin: 0 auto;
+}
+.comment__nav a{
+	font-size: 48px;
+	color: #ccc8b6;
+}
+/** Section Comment2 END **/
+
+
+/** GallerY **/
+.gallery__slider{
+	min-width: 0;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.gallery__slider .slick-arrow{
+    position: absolute;
+    top: 50%;
+    margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	width: 30px;
+	height: 50px;
+}
+.gallery__slider .slick-arrow.slick-prev{
+    left: 0;
+    background: url('../img/svg/sl-arrow_l.svg') 0 0 / 100% no-repeat;
+}
+.gallery__slider .slick-arrow.slick-next{
+    right: 0;
+    background: url('../img/svg/sl-arrow_r.svg') 0 0 / 100% no-repeat;
+}
+.gallery__first-block{
+	background-color:  #ccc8b6 ;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-basis: 45%;
+}
+.gallery__first-block h2{
+	width: 100%;
+	max-width: 300px;
+	font-family: 'TimesNewPSBoldMT';
+	font-size: 36px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	text-align: center;
+	color: #010101;
+	border: 10px solid #000;
+}
+.gallery__first-row{
+	display: flex;
+}
+.gallery__first-img {
+	display: block;
+	flex-basis: 22.5%;
+}
+.gallery__first-img img{
+	display: block;
+	width: 100%;
+}
+
+.gallery__all-row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.gallery__all-img{
+	display: block;
+	flex-basis: 20%;
+}
+.gallery__all-img img{
+	display: block;
+	width: 100%;
+} 
+/** gallery END **/
+
+
+/** Contact US**/
+.contact{
+	background-color: #e7e5d0 ;
+	
+}
+.contact__main{
+	padding-top: 182px;
+	padding-bottom: 100px;
+	display: flex;
+}
+
+.contact__main-left-nav{
+	display: flex;
+}
+.contact__main-left{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-basis: 55%;
+}
+
+.contact__main-left-title{
+	color: #010101;
+	font-family: 'TimesNewPSBoldMT';
+	border: 8px solid #000;
+	font-size: 36px;
+	text-align: center;
+	padding: 20px 25px 20px 25px;
+	text-transform: uppercase;
+
+}
+
+.contact__main-left-subtitle{
+	color: #000000;
+	font-family: 'TimesNewPSMT';
+	letter-spacing: 1;
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+	max-width: 489px;
+	margin: 80px 0px 60px 30px;
+}
+.contact__info-left{
+	margin-right: 40px;
+}
+.contact__info-left h3{
+	padding-bottom: 30px;
+	color: #000000;
+	font-family: 'TimesNewPSBoldMT';
+	font-size: 16px;
+}
+.contact__info-left p{
+	font-family: 'TimesNewPSMT';
+	text-transform: uppercase;
+}
+.contact__info-left span{
+	font-family: 'TimesNewPSBoldMT';
+}
+.contact__left-link{
+	margin-top: 119px;
+}
+.contact__left-link a{
+	margin-right: 30px;
+	color: #000000;
+	font-size: 36px;
+}
+.contact__left-link a span {
+	color: #3ac9e8;
+}
+.contact__left-link a:hover{
+	color: #3ac9e8;
+}
+
+
+
+.contact__info-right h3{
+	font-family: 'TimesNewPSBoldMT';
+	padding-bottom: 30px;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.contact__info-right p{
+	font-family: 'TimesNewPSMT';
+	text-transform: uppercase;
+}
+.contact__info-right span {
+	font-family: 'TimesNewPSBoldMT';
+}
+
+.contact__main-right{
+	margin-right: 50px;
+	flex-basis: 45%;
+}
+.contact__main-right input{
+	background-color: #e7e5d0;
+}
+.contact__main-rigth-first{
+	width: 100%;
+	display: block;
+	height: 60px;
+	border: 2px solid #000000;
+	padding-left: 20px;
+	font-family: 'TimesNewPSMT';
+	margin-bottom: 60px;
+}
+
+.contact__main-right-last{
+	font-family: 'TimesNewPSMT';
+	width: 100%;
+	display: block;
+	height: 220px;
+	border: 2px solid #000000;
+	padding-left: 20px;
+	background-color: #e7e5d0;
+	padding-top: 70px;
+}
+.contact__main-right-button{
+	width: 100%;
+	max-width: 370px;
+	height: 60px;
+	background-color: #9a977a;
+	border-radius: 5px;
+	margin-top: 30px;
+	font-family: 'TimesNewPSBoldMT';
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #ffffff;
+	position: relative;
+	transition: all 500ms ease;
+}
+.contact__main-right-button::before{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 60px;
+	background: rgba(255,255,255,0.3);
+	border-radius: 5px;
+	transition: all 1s ease;
+}
+.contact__main-right-button:hover::before{
+	width: 100%;
+}
+/** Contanct END **/
+
+/* Maps  */
+
+/** Footer **/
+.footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 500px;
+	background-color: #aeaeae;
+}
+.footer__nav{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer__subtitle{
+	color: #000000;
+	font-family: 'Roboto';
+	font-size: 12px;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 112px;
+}
+.footer__nav-item{
+	display: flex;
+}
+.footer__nav-item a{
+	font-family: 'TimesNewPSMT';
+	color: black;
+	font-size: 12px;
+	margin-left: 28px;
+	text-transform: uppercase;
+}
+.footer__nav-item a:hover{
+	border-bottom: black 2px solid;
+}
+.footer__nav-link{
+	padding-right: 20px;
+}
+.footer__logo{
+	margin-top: 27px;
+}
+/** Footer END **/

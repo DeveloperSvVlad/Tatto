@@ -1,0 +1,28 @@
+@font-face {
+	font-family: 'TimesNewPSBoldMT';
+	src: url('../fonts/timesbd.eot');
+	src: local('☺'), url('../fonts/timesbd.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TimesNewPSMT';
+	src: url('../fonts/times.eot');
+	src: local('☺'), url('../fonts/times.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TimesNewPSBoldMT';
+	src: url('../fonts/timesbi.eot');
+	src: local('☺'), url('../fonts/timesbi.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+

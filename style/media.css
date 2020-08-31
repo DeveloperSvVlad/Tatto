@@ -1,0 +1,129 @@
+/* !Адаптив под устройства */
+@media (min-width:700px) and (max-width:950px){
+	.team__item{
+		flex-basis: 50%;
+	}
+	.team__item-link-bio {
+		margin-bottom: 30px;
+	}	
+	.team__item-bio {
+		border-top: 2px solid #000;
+	}
+	.comment__title::before, .comment__title::after{
+		display: none;
+	}
+}
+@media (min-width: 319px) and (max-width: 699px) {
+	.team__item {
+		flex-basis: 100%;
+	}
+	.team__item-bg {
+		min-height: 400px;
+	}
+	.team__item-padtop{
+		padding-top: 50px;
+	
+	}
+	
+	.team__item-title-form{
+		padding-top: 80px;
+	}
+	.team__item-link-bio {
+		margin-bottom: 30px;
+	}
+	.team__item-button{
+		margin-bottom: 50px;
+	}
+	.comment__title::before, .comment__title::after{
+		display: none;
+	}
+	.contact__left-link a{
+		color: #000000;
+		font-size: 20px;
+	}
+	.comment__title span {
+		display: none;
+	}
+}
+@media (max-width:868px) {
+	.work__img {
+		padding: 10px;
+		background-color: #e7e5d0 ;
+	}
+}
+
+/* Адаптив на 768px */
+@media (max-width:768px) {
+	/* ?About Block адаптив Start */
+	.about{
+		flex-direction: column;
+	}
+	.about__left{
+		min-height: 500px;
+	}
+	.about__right{
+		min-height: 500px;
+	}
+	/*! About Block адатипв End */
+
+	/* ?Gallery Block Адаптив Start */
+	.gallery__first-row{
+		flex-wrap: wrap;
+	}
+	.gallery__first-block{
+		flex-basis: 100%;
+		padding: 50px 0px 50px 0px;
+	}
+	.gallery__first-img {
+		flex-basis: 33.33333%;
+	}
+	.gallery__all-img{
+		flex-basis: 25%;
+		padding: 5px 15px 5px 15px;
+		background-color: #e7e5d0 ;
+	}
+	
+	/* !Gallery Block Адаптив end */
+
+	/* ?Contact main */
+	.contact__main{
+		flex-direction: column;
+		padding-top: 40px;
+	}
+	.contact__main-left-subtitle{
+		margin: 40px auto;
+	}
+	.contact__left-link{
+		margin-top: 50px;
+	}
+	.contact__main-right{
+		margin-top: 30px;
+		margin-left: 50px;
+	}
+
+	/* !Contact__main Адаптив END */
+
+
+	/* ?Footer адаптив start*/
+	.footer__nav{
+		display: flex;
+		flex-direction: column;
+	}
+	.footer__logo{
+		order: -1;
+		margin-bottom: 10px;
+	}
+	.footer__nav-item{
+		padding-right: 15px;
+	}
+	.left li a{
+		font-size: 18px;
+	}
+	.footer__nav-item, .right {
+		margin-top: 15px;
+	}
+	.right li a {
+		font-size: 16px;
+	}
+	/* !Footer адаптив end  */
+}
