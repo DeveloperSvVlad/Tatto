@@ -25,6 +25,7 @@ html,body{
 	-webkit-text-size-adjust: 100%;
 	font-family: 'Roboto', sans-serif;
 	font-family: 'Open Sans', sans-serif;
+	scroll-behavior: smooth;
 }
 input,button,textarea{font-family:inherit; box-sizing: border-box;}
 
@@ -497,7 +498,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .contact__main-left-subtitle{
 	color: #000000;
 	font-family: 'TimesNewPSMT';
-	letter-spacing: 1;
+	letter-spacing: 0.8px;
 	font-size: 18px;
 	text-align: center;
 	width: 100%;
